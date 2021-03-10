@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Wanted Poster</title>
+</head>
+
+<body>
+    <table border="0" width="70%" align="center">
+        <tr>
+            <td height="75"></td>
+        </tr>
+        <tr>
+            <td>
+                <a href="../index.html">Back to Homepage</a>
+                <br><br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="most-wanted.php" method="post">
+                    <!--  TOP HEADLINE  -->
+                    <fieldset>
+                        <legend>Top Headline</legend>
+                        <div>
+                            <label for="hl-text">Headline text:</label>
+                            <input type="text" name="hl-text" id="hl-text">
+                        </div>
+                    </fieldset>
+                    <!--  TOP HEADLINE  END-->
+                    <br>
+                    <!--  IMAGES  -->
+                    <fieldset>
+                        <legend>Images</legend>
+                        <div>
+                            <label for="img1">Image 1:</label>
+                            <input type="file" name="image1" id="img1">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="img2">Image 2:</label>
+                            <input type="file" name="image2" id="img2">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="img3">Image 3:</label>
+                            <input type="file" name="image3" id="img3">
+                        </div>
+                    </fieldset>
+                    <!--  IMAGES  END-->
+                    <br>
+                    <!--  REWARD MONEY  -->
+                    <fieldset>
+                        <legend>Reward</legend>
+                        <label for="rewardMoney">Reward Money:</label>
+                        <input type="number" name="rewardMoney" id="rewardMoney" max="1000000" min="500">
+                    </fieldset>
+                    <!--  REWARD  MONEY END-->
+                    <br>
+                    <!--  REWARD  DESCRIPTION-->
+                    <fieldset>
+                        <legend>Reward</legend>
+                        <label for="">Aliases:</label>
+                        <br>
+                        <input type="text">
+                        <br><br>
+                        <label for="">Birth:</label>
+                        <br>
+                        <input type="date">
+                        <br><br>
+                        <label for="">Hair:</label>
+                        <br>
+                        <input type="text">
+                        <br><br>
+                        <label for="">Eyes:</label>
+                        <br>
+                        <input type="text">
+                        <br><br>
+                        <label for="">Height</label>
+                        <br>
+                        <input type="number">
+                        <br><br>
+                        <label for="">Weight</label>
+                        <br>
+                        <input type="text">
+                        <br><br>
+                        <p>Sex:</p>
+                        <input type="radio" name="gender" id="genderM">
+                        <label for="genderM">Male</label>
+                        <input type="radio" name="gender" id="genderF">
+                        <label for="genderF">Female</label>
+                        <br><br>
+                        <label for="idNumber">ID number</label>
+                        <input type="number" name="idNumber" id="idNumber">
+                        <br><br>
+                        <label for="occupation">Occupation</label>
+                        <br><br>
+                        <select name="occupation" id="occupation" size="1">
+                            <option value="student" selected>Student</option>
+                            <option value="thug">Thug</option>
+                            <option value="rockstar">Rockstar</option>
+                            <option value="redneck">Redneck</option>
+                        </select>
+                        <br><br>
+                    </fieldset>
+                    <!--  REWARD DESCRIPTION  END-->
+                    <br>
+                    <!--  REMARKS  -->
+                    <fieldset>
+                        <legend>Remarks</legend>
+                        <textarea name="remarls" cols="170" rows="10" placeholder="Remarks text"></textarea>
+                    </fieldset>
+                    <!--  REMARKS  END-->
+                    <br>
+                    <!--  CAUTION  -->
+                    <fieldset>
+                        <legend>Caution</legend>
+                        <textarea name="caution" cols="170" rows="10" placeholder="Remarks text"></textarea>
+                    </fieldset>
+                    <!--  CAUTION  END-->
+                    <br>
+                    <!--  RESET -->
+                        <input type="reset" value="Restart">
+                    <!--  RESET END-->
+                    <!--  SUBMIT -->
+                        <input type="submit" value="Create Poster">
+                    <!--  SUBMIT END -->
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
