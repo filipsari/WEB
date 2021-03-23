@@ -1,0 +1,42 @@
+.all {
+  background: yellow;
+  border-width: 5px thick;
+  padding: 0px;
+  margin: 20px;
+  display: inline-block;
+  width: 1200px;
+}
+
+.first,
+.third {
+  border-color: red;
+  border-style: dotted;
+}
+
+.second {
+  border-color: green;
+  border-style: solid;
+  width: 400px;
+}
+
+.first {
+  width: 400px;
+}
+
+.third {
+  width: 400px;
+}
+
+.head-title {
+  background-color: rgb(248, 212, 212);
+  width: 960px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 50px 0px;
+  color: brown;
+  font-family: 'Franklin Gothic Medium';
+  -webkit-box-shadow: 18px 28px 26px 13px rgba(25,239,255,0.9); 
+box-shadow: 18px 28px 26px 13px rgba(25,239,255,0.9);
+border-radius: 25px;
+}
+

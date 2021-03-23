@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(235, 220, 202);
+  font-size: 32px;
+  color: rgb(49, 12, 184);
+}
+
+h1 {
+  color: rgb(49, 12, 184);
+}
+
+
+ a:link {
+  color: red;
+  text-shadow: 4px 4px 3px rgba(255, 0, 0, 0.55);
+  text-decoration: none;
+}
+
+
+
+a:visited {
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  border: dotted 2px rgb(14, 9, 77);
+  color: green; 
+  transition: 0.5s; 
+}
+
+a::selection {
+  background-color: blue;
+}
