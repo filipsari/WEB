@@ -1,0 +1,209 @@
+
+  /*========================================== 
+    MEDIA QUERIES
+  ========================================== */
+  
+  /*========================================== 
+   /*  tablets, Ipads, horizontal landscapes screen  
+  ● Tablet - 768px
+  ========================================== */
+
+  @media screen and (min-width: 768px) {
+
+ /*** TOP CONTAINER ***/
+
+    .top-container {
+      background-image: url(assets/images/banner3.jpg);
+      background-size: cover;
+      position: relative;
+    }
+
+    .logo {
+      float: left; 
+      color: white;
+      font-size: 30px;
+      padding-left: 15px;
+      margin: 20px 0 0 0;
+     
+    }
+
+    .navigation ul {
+      background-color: rgba(127, 194, 247, 0);
+      float: right;
+      max-width: 40%;
+      margin: 25px 0 0 0;
+     
+    }
+
+    .navigation ul li {
+      display: inline;
+    }
+
+    .navigation ul li a {
+      font-size: 14px;
+      font-weight: 200;
+      padding-left: 8px;
+    }
+   
+    .span-logo {
+      border: solid 5px white;
+      color: rgb(255, 152, 1);
+      border-right-style: hidden;
+      margin-right: 5px;
+      padding-left: 10px;
+    }
+
+    .header h1 {
+      margin-top: 60px;
+    }
+
+    .header{
+      background-image: none;
+    }
+  
+/****  MAIN *** SECTION 1 *** "Who we are" *****/ 
+ 
+.article-1 {
+  float: left;
+  width: 50%;
+  padding-left: 1%;
+}
+
+.picture { 
+  float: left;
+  width: 50%;
+}
+
+.article-3 {
+  clear:both;
+  width: 100%;
+  padding-left: 1%;
+}
+
+
+
+  /* MAIN ***SECTION 2 *** "What people says"  */
+
+.people {
+  width: 46%;
+  display: inline-block;
+  margin-left: 20px;
+}    
+
+.container-comments{
+  margin: 0 auto;
+  width: 100%; 
+}
+
+
+  /*  *** CONTACT --  "Mail us"  */
+
+  .mail-container {
+    width: 84%; 
+    }
+    
+    #e-mail, #number {
+      width: 31%;
+      margin-top: 15px;
+      margin-left: 12px;
+    
+    }
+
+    #name{
+      width: 31%;
+    }
+
+
+}
+
+
+
+
+
+  /*========================================== 
+   /*  DESKTOP  
+    ● Desktop - 1200px
+  ==========================================*/
+
+  @media screen and (min-width: 1200px){
+
+   /*****TOP CONTAINER ****/
+
+ .navigation ul li a {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 15px;
+  }
+
+  .navigation ul {
+    text-align: right;
+  }
+ 
+ /*****  MAIN ***SECTION 1 *** "Who we are" ****/
+
+ .article-1 {
+  float:left;
+  width: 33%;
+}
+
+.picture { 
+  float: left;
+  width: 33%;
+  margin-bottom: 30px;
+  padding: 0 4%;
+}
+
+.article-3 {
+  clear: none;
+  float: left;
+  width: 33%;
+}
+
+
+.section-one {
+  padding-top: 52px;
+  max-width: 67%;
+  margin: 0 auto;
+}
+
+
+  /* MAIN ***SECTION 2 *** "What people says"  */
+
+    .people {
+      width: 30%;
+      display: inline-block;
+      margin-left: 20px;
+    }   
+    .container-comments{
+      text-align: center;
+    }
+
+/* *** SECTION 3 --"Get in touch with us" -*/
+.contact{
+  width: 25%;
+}
+
+
+  /*  *** CONTACT --  "Mail us"  */
+
+.mail-container {
+  max-width: 80%;
+  margin: 0 auto;
+  }
+
+  #e-mail, #number {
+    width: 32%;
+    margin-top: 15px;
+    margin-left: 9px;
+  
+  }
+
+  #name{
+    width: 32%;
+  }
+
+  #text{
+  max-width: 100%;
+  }
+  
+   }
