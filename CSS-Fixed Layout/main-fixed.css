@@ -1,0 +1,95 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: Arial;
+  font-weight: lighter;
+  font-size: 50px;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 30px;
+  padding-left: 10px;
+  font-family: Arial;
+  font-weight: lighter;
+}
+
+p {
+  font-size: 15px;
+  padding-left: 5px;
+  margin-top: 15px;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  display: block;
+}
+
+.clear-fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/********* TOP-CONTAINER ******** */
+.top-container {
+  margin-top: 40px;
+}
+
+.image {
+  float: left;
+}
+
+.picture {
+  width: 90px;
+  border-radius: 50px 50px;
+}
+
+.title {
+  margin-left: 40px;
+  padding-bottom: 100px;
+  float: left;
+}
+
+
+/********* END OF TOP-CONTAINER ******** */
+
+
+
+/********* CENTRAL-CONTAINER ******** */
+
+
+
+
+.left {
+ float: left;
+  width: 380px;
+  margin-top: 15px;
+  margin-right: auto;
+}
+
+.right {
+ float: right;
+  width: 570px;
+  border-left: 2px solid black;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+
+.right-top {
+
+}
+
+.right-down{
+  margin-top: 35px;
+  padding-bottom: 10px;
+}
+
+/********* END OF CENTRAL-CONTAINER ******** */

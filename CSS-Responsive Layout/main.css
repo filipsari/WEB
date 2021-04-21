@@ -1,0 +1,137 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 415px;
+  margin: 0 auto;
+  display: block;
+}
+
+.clear-fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+img {
+  width: 100%;
+}
+
+
+/********* TOP-HEADER ******** */
+
+
+ h1 { 
+ 
+  margin: 0 auto;
+  font-family: Arial;
+  font-weight: lighter;
+  font-size: 50px;
+  font-style: normal;
+  padding: 50px;
+  text-align: center;
+}
+
+.header-image { 
+  padding: 0px 25px;
+  text-align:center;
+  border: 2px solid rgb(18, 240, 66);
+  margin: 10px 15px;
+
+
+}
+
+/********* END TOP-HEADER ******** */
+
+
+
+
+/********* MENU-BAR ******** */
+
+.nav {
+display: block;
+text-align: center;
+margin: 10px 12px;
+border: 2px solid rgb(250, 21, 109);
+}
+
+li {
+  list-style: none;
+  width: 100%;
+  border: 1px solid lightgrey;
+  height: 30px;
+  text-align: center;
+}
+
+
+/*********END OF MENU-BAR ******** */
+
+
+
+
+/*********MAIN CONTENT ******** */
+.first, .second, .third {
+  padding: 0px 25px;
+  text-align:center;
+  border: 2px solid rgb(18, 240, 66);
+  margin: 20px 15px;
+}
+
+
+.first{
+  
+}
+
+.second{
+
+}
+
+.third {
+
+}
+
+
+/*********END OF MAIN CONTENT ******** */
+
+
+@media only screen and (min-width: 600px) { 
+body{
+  background-color: deepskyblue;
+}
+
+ h1 {
+  text-align: left;
+  margin: 30px 0px;
+  width: 50%;
+
+
+}
+
+
+.nav ul {
+  position: absolute;
+  right: 13%;
+  top: 22px;
+  width: 50%;
+  text-align: right;
+}
+.nav ul li {
+  display: inline;
+  border: none;
+}
+
+ } 
+
+
+ @media only screen and (min-width: 900px) { 
+  body{
+    background-color: rgb(252, 7, 88);
+  }
+  
+   } 
+  

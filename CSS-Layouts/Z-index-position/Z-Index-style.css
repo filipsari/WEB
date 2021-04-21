@@ -1,0 +1,73 @@
+
+
+.all {
+  width: 200px;
+  height: 200px; 
+  background-color: rgb(168, 168, 168);
+}
+
+.number1{
+background-color: rgb(199, 38, 70);
+}
+
+.number2{
+  background-color: rgb(231, 220, 61);
+}
+
+.number3{
+  background-color: black;
+}
+
+.number4{
+  background-color: rgb(199, 38, 70);
+  position: relative;
+  }
+  
+  .number5{
+    background-color: rgb(231, 220, 61);
+    position: relative;
+    left:100px;
+    bottom:100px;
+  }
+  
+  .number6{
+    background-color: black;
+    position: relative;
+    left: 200px;
+    bottom: 200px;
+  }
+
+  .parent{
+    
+    position: relative;
+    width: 1000px;
+    height: 600px;
+  }
+     
+  .number7{
+    background-color: rgb(199, 38, 70);
+    position:absolute;
+    right: 0px;
+    z-index: 2;
+    }
+
+  .number8{
+      background-color: rgb(231, 220, 61);
+      position:absolute;
+      right: 100px;
+      top:100px;
+      z-index: 1;
+    }  
+
+  .number9{
+      background-color: black;
+      position:absolute;
+      right: 200px;
+      top:200px;
+    }
+
+ 
+
+    
+  
+  
