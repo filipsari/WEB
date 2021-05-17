@@ -1,0 +1,185 @@
+/* ********** VARIABLES ************** */
+/* ********** FONTS ************** */
+@font-face {
+  font-family: myRegular;
+  src: url(..fonts/Lato-Regular.ttf); }
+@font-face {
+  font-family: myItalic;
+  src: url(../fonts/Lato-Italic.ttf); }
+@font-face {
+  font-family: myBold;
+  src: url(../fonts/Lato-Bold.ttf); }
+@font-face {
+  font-family: myLight;
+  src: url(../fonts/Lato-Light.ttf); }
+@font-face {
+  font-family: myBlack;
+  src: url(../fonts/Lato-Black.ttf); }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+/* ********** NAV BAR, Portfolio bar and AND ABOUT  ************** */
+.navbar {
+  background-color: #2c3e50; }
+
+.FS-center-pic > img {
+  width: 100%;
+  height: auto; }
+
+.FS-center-position {
+  text-align: center;
+  margin-bottom: 15px; }
+
+.FS-lin {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font-size: 55px; }
+
+.FS-center-pic {
+  text-align: center; }
+
+.FS-top {
+  margin-top: 55px; }
+
+.fs-bg-color {
+  background-color: #18bc9c; }
+
+.FS-padding-off {
+  padding: 0px; }
+
+.about {
+  margin-top: 30px; }
+
+.fs-color-font-headlines {
+  font-family: myBold;
+  color: white; }
+
+.fs-color-font-paragraph {
+  font-family: myLight;
+  color: white;
+  font-weight: 600; }
+
+.fs-white {
+  color: white; }
+
+.fs-green-menu {
+  background-color: #18bc9c; }
+
+.fs-white-star {
+  color: white;
+  margin: 0 auto;
+  text-align: bottom;
+  margin-top: 29px; }
+
+.fs-font-regular {
+  font-family: myRegular;
+  font-weight: 600; }
+
+.fs-font-italic {
+  font-family: myItalic; }
+
+.fs-font-bold {
+  font-family: myBold; }
+
+.fs-font-light {
+  font-family: myLight; }
+
+.fs-color-font-portfolio {
+  font-family: myBlack;
+  color: BLACK;
+  font-weight: 600; }
+
+.fs-black-star {
+  color: black;
+  margin: 0 auto;
+  text-align: bottom;
+  margin-top: 29px; }
+
+.line-left-black {
+  text-align: right;
+  display: block;
+  margin: 0;
+  margin-right: 14px;
+  font-size: 45px;
+  color: black; }
+
+.line-right-black {
+  text-align: left;
+  display: block;
+  margin: 0;
+  margin-left: 5px;
+  font-size: 45px;
+  color: black; }
+
+.line-left {
+  text-align: right;
+  display: block;
+  margin: 0;
+  margin-right: 14px;
+  font-size: 45px;
+  color: white; }
+
+.line-right {
+  text-align: left;
+  display: block;
+  margin: 0;
+  margin-left: 5px;
+  font-size: 45px;
+  color: white; }
+
+/* **********  ABOUT   ************** */
+.fs-button {
+  text-align: center; }
+
+.about-margin {
+  margin-left: 10px; }
+
+.fs-button-margin {
+  margin-top: 35px; }
+
+.fs-about-section-bg {
+  padding-bottom: 35px; }
+
+.fs-about-margin {
+  margin-bottom: 15px; }
+
+/* **********  CONTACT ME  ************** */
+.fs-margin-form {
+  margin: 0 auto; }
+
+.fs-padding-form {
+  padding-bottom: 15px; }
+
+.fs-margin-button {
+  margin-top: 15px; }
+
+/* **********  FOOTER  ************** */
+.fs-blue-color {
+  background-color: #2c3e50; }
+
+.fs-icon {
+  font-size: 35px;
+  padding: 4px;
+  border: solid 1px white;
+  border-radius: 50%;
+  margin-left: 5px; }
+
+.fs-fb {
+  font-size: 39px;
+  padding-top: 10px; }
+
+/* **********  MEDIA QUERIES   ************** */
+@media only screen and (min-width: 768px) {
+  .fs-green-menu {
+    background-color: #2c3e50; } }
+@media only screen and (min-width: 992px) {
+  .fs-about-text {
+    margin: auto; }
+
+  .fs-about-margin {
+    margin-bottom: 0px; } }
+
+/*# sourceMappingURL=main.css.map */
