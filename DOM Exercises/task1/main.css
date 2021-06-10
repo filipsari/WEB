@@ -1,0 +1,16 @@
+.first {
+  background-color: blue;
+}
+
+.second {
+  background-color: chartreuse;
+}
+
+.red {
+  background-color: crimson;
+}
+
+.yellow {
+  background-color: yellow;
+  text-transform: uppercase;
+}
