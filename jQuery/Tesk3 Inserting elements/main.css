@@ -1,0 +1,11 @@
+.border {
+  border: 5px solid greenyellow;
+}
+
+.border1 {
+  border: 5px solid rgb(255, 47, 47);
+}
+
+.testCSS {
+  border-radius: 50%;
+}
