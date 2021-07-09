@@ -1,47 +1,43 @@
+const endpoint = "http://api.tvmaze.com/shows";
+let main = document.querySelector(".main-div");
+let top50 ={};
 
-let div = document.querySelector("#task");
-let ul = document.querySelector("ul"); 
-
-let show =[];
-
-let request = new XMLHttpRequest();
-
-request.open("GET", "http://api.tvmaze.com/shows");
-
+const request = new XMLHttpRequest();
+request.open("GET", endpoint, true);
 request.onload = function(){
   if (request.status === 200){
-    let data = JSON.parse(request.responseText);
- 
-    data.forEach(function(element){
-      show.push(element);
-    })
-
-   let sortedShow = show.sort( function(x,y){
+    const data = JSON.parse(request.responseText);
+  
+   let sortedShow = data.sort( function(x,y){
       return y.rating.average - x.rating.average;  
    })
 
-   let top50 = sortedShow.slice(0,50);
+   top50 = sortedShow.slice(0,50);
    top50.forEach(function(element){
-    let li = document.createElement("li");
-    li.textContent = element.name;
-    li.setAttribute("our-key", element.id);
-    ul.append(li);
+    let mainDiv = document.createElement("div");
+    mainDiv.setAttribute("our-key", element.id);
+    mainDiv.classList = "tv-div";
+    let img = document.createElement("img");
+    img.setAttribute("src", element.image.medium);
+    let title = document.createElement("h4");
+    title.textContent = element.name;
+    main.append(mainDiv);
+    mainDiv.append(img);
+    mainDiv.append(title);
    })
    
    window.localStorage.clear();
 
-   let selectingAllLi = document.querySelectorAll("li");
-   selectingAllLi.forEach(function(element){
-     element.addEventListener("click", function(){
-       let key = element.getAttribute("our-key");
-       window.localStorage.setItem("id", key); 
-       document.location="second.html"
+   let div = document.querySelectorAll(".tv-div")
+   div.forEach(function(element){
+     element.addEventListener("click", function(event){
+       event.preventDefault();
+       let key = document.querySelector(".tv-div").getAttribute("our-key");
+       window.localStorage.setItem("id", key);
+       document.location = "second.html"
      })
-   })
+   }) 
+  }};
 
-  
-  }
-};
 
 request.send();
-
