@@ -3,10 +3,32 @@
   
 } */
 
-.navbar-brand{
- background-color: aliceblue; 
+.navbar-grey, .container-fluid{
+ background-color: rgb(165, 170, 175); 
 }
 
 h1{
   text-align: center;
+}
+
+.tv-div{
+  width: 31%;
+  display: inline-block;
+  margin: 18px 10px;
+  border: 1px solid gray;
+  text-align: center;
+}
+
+.main-div{
+  display: block;
+}
+
+.left{
+  width: 60%;
+  display: inline-block;
+}
+
+.right {
+  width: 30%;
+  display: inline-block;
 }
