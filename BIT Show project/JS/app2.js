@@ -4,44 +4,57 @@ window.addEventListener('load', function() {
 // primer za detalje: https://api.tvmaze.com/shows/169
 // primer za sezone: https://api.tvmaze.com/shows/169/seasons
 // primer za glumce: https://api.tvmaze.com/shows/169/cast
+// primer za poseter: https://api.tvmaze.com/shows/82/images
 // broj sezona = duzina response-a sa /shows/:id/seasons (data.length)
 
 var key = window.localStorage.getItem("id");  
-//console.log(localStorage);
 const baseUrl = 'https://api.tvmaze.com';
 let main = document.querySelector(".container");
-let rightDiv = document.querySelector(".right")
+let rightDiv = document.querySelector(".right");
+let leftDiv = document.querySelector(".left");
+let h2 = document.querySelector(".titleH2")
+
+
+const requestTitle = new XMLHttpRequest();
+requestTitle.open("GET", `${baseUrl}/shows/${key}`);
+requestTitle.onload = function(){
+  if(requestTitle.status === 200){
+    const dataTitle = JSON.parse(requestTitle.responseText);
+    h2.textContent = dataTitle.name; 
+  }
+}
+requestTitle.send();
+
+
 
 const requestSeasons = new XMLHttpRequest();
 requestSeasons.open("GET", "http://api.tvmaze.com/shows/" + key + "/seasons");
-//requestSeasons.open("GET", `${baseUrl}/shows/${key}/seasons`, true);
-// isto kao i gornji template string: requestSeasons.open("GET", baseUrl + "/shows/" + key + "/seasons")
 requestSeasons.onload = function(){
   if (requestSeasons.status === 200){
     const data = JSON.parse(requestSeasons.responseText);
 
-    
+
       //  ******* creating Season (number) ***** 
-      let mainDiv = document.createElement("div");
+      // let mainDiv = document.createElement("div");
       let title = document.createElement("h3");
       title.textContent = "Seasons (" + data.length + ")";
-      main.append(mainDiv);
-      mainDiv.append(title);
+      // main.append(mainDiv);
+      rightDiv.append(title);
       //  ******* creating Season (number) ***** 
 
 
       //  ******* creating Season LIST ***** 
     data.forEach(function(element){
-    let listOfSeasons = document.createElement("div");
+    // let listOfSeasons = document.createElement("div");
     let li = document.createElement("li");
     let ul = document.createElement("ul"); 
 
     let seasonTime = document.createElement("h4");
-    let seasonTable = seasonTime.textContent = (element.premiereDate + " --- "  + element.endDate);
+    let seasonTable = seasonTime.textContent = (element.premiereDate + " - "  + element.endDate);
     ul.textContent = seasonTable; 
 
-    main.append(listOfSeasons);
-    listOfSeasons.append(ul);
+    // main.append(listOfSeasons);
+    rightDiv.append(ul);
     ul.append(li);
     //  ******* creating Season LIST ***** 
     })
@@ -60,18 +73,18 @@ requestCast.onload = function(){
     const data = JSON.parse(requestCast.responseText);
     let cast = document.createElement("h3");
     cast.textContent = "Cast";
-    main.append(cast);
+    rightDiv.append(cast);
 
     data.forEach(function(element){
-    let actorList = document.createElement("div");
+    // let actorList = document.createElement("div");
     let actorLi = document.createElement("li");
     let actorUl = document.createElement("ul");
     let actors = document.createElement("h4");
-    var actorNames = actors.textContent = element.person.name;
+    let actorNames = actors.textContent = element.person.name;
     actorLi.textContent=actorNames;
 
-    main.append(actorList);
-    actorList.append(actorUl);
+    // main.append(actorList);
+    rightDiv.append(actorUl);
     actorUl.append(actorLi);
     })
   }
@@ -92,21 +105,29 @@ requestDetails.onload = function(){
     let show = document.createElement("h3");
     show.textContent = "Show details";
     let divParagraph = document.createElement("div");
-   
+    divParagraph.setAttribute("class", "details");
     main.append(show);
-    
     main.append(divParagraph);
-    
-    divParagraph.innerHTML=data.summary;
-  
-     
+    divParagraph.innerHTML=data.summary;   
   }
 }
-
 requestDetails.send();
+
+/***************  POSTER ******************************** */
+const requestPoster = new XMLHttpRequest();
+requestPoster.open("GET", `${baseUrl}/shows/${key}/images`)
+requestPoster.onload = function(){
+  if (requestPoster.status === 200){
+    const posterData = JSON.parse(requestPoster.responseText);
+    const img = document.createElement("img");
+    img.setAttribute("src", posterData[0].resolutions.original.url);
+    img.classList.add("image-size");
+    leftDiv.append(img);
+  }
+}
+requestPoster.send();
+
+/***************  POSTER ******************************** */
 
 });
 
-// za svaki search result, kreirati <li> i u okviru njega <a href="second.html" data-our-key={searchResult.show.id}></a>, i zatim
-    // postupati identicno kao sa prvih 50 serija sa pocetne strane, klikom na seriju dohvatis njen id (iz data-our-key) i tu vrednost 
-    //     ubaciti u localStorage, da kada dodjes na second.html znas koje podatke da dohvatis

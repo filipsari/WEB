@@ -1,0 +1,103 @@
+
+$grey-colour: #a5aaaf;
+$official-colour: rgb(52,58,64);
+
+.clearfix{zoom:1};
+.clearfix::after{
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+
+span{
+  padding-left: 10px;
+}
+
+.navbar{
+  background-color: $official-colour; 
+  color: beige;
+  font-size: 25px;
+ }
+ 
+.container-fluid, .navbar-brand, .btn{
+  @extend .navbar;
+}
+
+a{
+  padding-left: 20%;
+}
+
+.d-flex{
+  padding-right: 20%;
+}
+
+
+footer{
+  background-color: $official-colour;
+  padding: 30px;
+  color: beige;
+  font-size: 18px;
+  text-align: center;
+}
+
+
+ h1{
+   text-align: center;
+ }
+
+ h2{
+   @extend h1;
+   padding-bottom: 25px;
+ }
+
+ h3{
+   padding-top: 35px;
+   padding-bottom: 12px;
+ }
+ 
+ .tv-div{
+   width: 31%;
+   display: inline-block;
+   margin: 18px 10px;
+   border: 0.5px dotted gray;
+   text-align: center;
+ }
+ 
+ .main-div{
+   display: block;
+ }
+ 
+ .left{
+   width: 60%;
+   display: block;
+   text-align: center;
+   float: left;
+ }
+ 
+ .right {
+   width: 40%;
+   display: block;
+   float: right;
+ }
+
+.image-size{
+  width: 65%;
+}
+
+.details{
+  width: 100%;
+  display: block;
+}
+
+@media only screen and (max-width: 631px) {
+  .tv-div{
+    width: 45%;
+    display: inline-block;
+    margin: 18px 10px;
+    border: 0.5px dotted gray;
+    text-align: center;
+  }
+}

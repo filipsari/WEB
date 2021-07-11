@@ -1,34 +1,78 @@
-/* .container-fluid{
-  background-color: rgb(52,58,64);
-  
-} */
+.clearfix {
+  zoom: 1; }
 
-.navbar-grey, .container-fluid{
- background-color: rgb(165, 170, 175); 
-}
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden; }
 
-h1{
-  text-align: center;
-}
+span {
+  padding-left: 10px; }
 
-.tv-div{
+.navbar, .container-fluid, .navbar-brand, .btn {
+  background-color: #343a40;
+  color: beige;
+  font-size: 25px; }
+
+a {
+  padding-left: 20%; }
+
+.d-flex {
+  padding-right: 20%; }
+
+footer {
+  background-color: #343a40;
+  padding: 30px;
+  color: beige;
+  font-size: 18px;
+  text-align: center; }
+
+h1, h2 {
+  text-align: center; }
+
+h2 {
+  padding-bottom: 25px; }
+
+h3 {
+  padding-top: 35px;
+  padding-bottom: 12px; }
+
+.tv-div {
   width: 31%;
   display: inline-block;
   margin: 18px 10px;
-  border: 1px solid gray;
-  text-align: center;
-}
+  border: 0.5px dotted gray;
+  text-align: center; }
 
-.main-div{
-  display: block;
-}
+.main-div {
+  display: block; }
 
-.left{
+.left {
   width: 60%;
-  display: inline-block;
-}
+  display: block;
+  text-align: center;
+  float: left; }
 
 .right {
-  width: 30%;
-  display: inline-block;
-}
+  width: 40%;
+  display: block;
+  float: right; }
+
+.image-size {
+  width: 65%; }
+
+.details {
+  width: 100%;
+  display: block; }
+
+@media only screen and (max-width: 631px) {
+  .tv-div {
+    width: 45%;
+    display: inline-block;
+    margin: 18px 10px;
+    border: 0.5px dotted gray;
+    text-align: center; } }
+
+/*# sourceMappingURL=main.css.map */
