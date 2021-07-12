@@ -67,6 +67,17 @@ h3 {
   width: 100%;
   display: block; }
 
+.d-flex {
+  position: relative; }
+
+.search-results {
+  position: absolute;
+  top: 54px;
+  left: 69%;
+  background-color: #dce2e9;
+  list-style: none;
+  padding-left: 15px; }
+
 @media only screen and (max-width: 631px) {
   .tv-div {
     width: 45%;

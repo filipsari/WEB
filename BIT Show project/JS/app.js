@@ -9,6 +9,13 @@ window.addEventListener('load', function() {
   let main = document.querySelector(".main-div");
   let top50 =[];
 
+  function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+ 
+
   const request = new XMLHttpRequest();
   request.open("GET", `${baseUrl}/shows`, true);
   request.onload = function(){
@@ -49,35 +56,77 @@ window.addEventListener('load', function() {
     }};
   request.send();
 
-  // const requestSearch = new XMLHttpRequest();
-  // requestSearch.open("GET", endpoint, true);
-  // requestSearch.onload = function(){
-  //   if (request.status === 200){
-  //     const data = JSON.parse(request.responseText);
-  //     console.log({data})
-  //   }
-  // }
 
-  const btnSearch = document.getElementById('btnSearch');
-  btnSearch.addEventListener('keyup', function(event) {
-    console.log(event)
-    if (!event.target.value) {
-      return;
-    }
 
-    const requestSearch = new XMLHttpRequest();
-    console.log({requestSearch})
-    requestSearch.open("GET", `${baseUrl}/search/shows?q=${event.target.value}`, true);
-    requestSearch.onload = function(){
-      if (requestSearch.status === 200){
-        const searchResults = JSON.parse(requestSearch.responseText);
-        console.log({searchResults})
-      }
-    }
-    requestSearch.send();
-  })
+
+ /************* SEARCH INPUT FIELD ******************************************* */
+ let ul = null;
+
+ // const searchResultsWrapper = document.querySelector('.search-results');
+
+ const btnSearch = document.getElementById('btnSearch');
+ btnSearch.addEventListener('keyup', function(event) {
+   console.log(event)
+   if (!event.target.value) {
+     return;
+   }
+   const requestSearch = new XMLHttpRequest();
+   console.log({requestSearch})
+   requestSearch.open("GET", `${baseUrl}/search/shows?q=${event.target.value}`, true);
+   requestSearch.onload = function(){
+     if (requestSearch.status === 200){
+       const searchResultsWrapper = document.querySelector('.search-results');
+       console.log({searchResultsWrapper});
+       if (searchResultsWrapper && searchResultsWrapper.children.length > 0) {
+         console.log('VEC POSTOJE REZULTATI PRETRAGE');
+         removeAllChildNodes(searchResultsWrapper);
+       }
+
+       const searchResults = JSON.parse(requestSearch.responseText);
+       console.log({searchResults})
+
+       if (!searchResultsWrapper) {
+          ul = document.createElement("ul");
+          ul.classList.add('search-results');
+          main.append(ul);
+        }
+            
+       searchResults.forEach(function(element){
+     
+          let text = document.createElement("h5").textContent;
+          let fullText= text.textContent=element.show.name
+        
+          let li = document.createElement("li"); 
+          // li.setAttribute(`<a href="second.html"></a>`, someValue);
+          li.textContent=fullText;
+          
+          console.log(fullText);
+            
+          ul.append(li);
+       })  
+    
+     }
+   }
+   requestSearch.send();
+ })
+
+/************* END SEARCH INPUT FIELD ******************************************* */
+
+
 })
 
 // za svaki search result, kreirati <li> i u okviru njega <a href="second.html" data-our-key={searchResult.show.id}></a>, i zatim
     // postupati identicno kao sa prvih 50 serija sa pocetne strane, klikom na seriju dohvatis njen id (iz data-our-key) i tu vrednost 
     //     ubaciti u localStorage, da kada dodjes na second.html znas koje podatke da dohvatis
+
+ 
+    // URL: /search/shows?q=:query
+    // Example: https://api.tvmaze.com/search/shows?q=girls
+
+
+
+
+
+
+
+
