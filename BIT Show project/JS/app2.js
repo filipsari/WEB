@@ -51,8 +51,7 @@ requestSeasons.onload = function(){
 
     let seasonTime = document.createElement("h4");
     let seasonTable = seasonTime.textContent = (element.premiereDate + " - "  + element.endDate);
-    ul.textContent = seasonTable; 
-
+    li.textContent = seasonTable; 
     // main.append(listOfSeasons);
     rightDiv.append(ul);
     ul.append(li);

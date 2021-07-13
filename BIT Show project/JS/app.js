@@ -107,6 +107,9 @@ window.addEventListener('load', function() {
     
      }
    }
+
+
+
    requestSearch.send();
  })
 
@@ -114,6 +117,10 @@ window.addEventListener('load', function() {
 
 
 })
+
+
+
+
 
 // za svaki search result, kreirati <li> i u okviru njega <a href="second.html" data-our-key={searchResult.show.id}></a>, i zatim
     // postupati identicno kao sa prvih 50 serija sa pocetne strane, klikom na seriju dohvatis njen id (iz data-our-key) i tu vrednost 
