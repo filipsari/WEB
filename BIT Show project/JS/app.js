@@ -92,16 +92,24 @@ window.addEventListener('load', function() {
         }
             
        searchResults.forEach(function(element){
-     
+          console.log(element);
           let text = document.createElement("h5").textContent;
-          let fullText= text.textContent=element.show.name
+          // let fullText= text.textContent=element.show.name
         
           let li = document.createElement("li"); 
-          // li.setAttribute(`<a href="second.html"></a>`, someValue);
-          li.textContent=fullText;
+          li.classList.add("single-result");
+          li.innerText= element.show.name;
+          li.setAttribute("data-our-key", element.show.id);
+
           
-          console.log(fullText);
-            
+          // li.textContent=fullText;
+          
+          // let link = document.createElement("a");
+          // link.classList.add("single-result");
+          // link.innerText = element.show.name;
+          // link.setAttribute("data-our-key", element.id);
+          // link.href= "second.html";
+          // li.append(link); 
           ul.append(li);
        })  
     
@@ -116,7 +124,37 @@ window.addEventListener('load', function() {
 /************* END SEARCH INPUT FIELD ******************************************* */
 
 
+document.addEventListener('click', function(event) {  //event Delegation
+  console.log(event.target);
+  if (event.target.classList.contains('single-result')) {
+    
+   console.log("KLIKNUO SAM NA JEDNU SERIJU :) ");
+  
+   const id = event.target.getAttribute("data-our-key");
+   console.log(id);
+
+   window.localStorage.setItem("id", id);
+   document.location = "second.html";
+
+
+}
+});
+
+// event listenr na svaki single result, da se proveri da li ce raditi. seletovati single resultove preko 
+// document.querySelectorAll(".single-result"); vraca NOD listu koja mora da se prebaci u Array ... 
+// Array.from(naziv promenljive gde je document.quearySelectorAll). 
+// const results = document.querySelectorAll(".single-result").
+// const resultAray = Array.from(results);
+// resultArray.foreach( function (element) {  
+  // element.addEventListener("click")
+  // console.log();
+   //)}
+// na svaki od tih elem, dodati eventlistener. moguce da nece raditi, posto elem ne postoje u DOMu od pocetka.  
+
+
+
 })
+
 
 
 
